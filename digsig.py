@@ -26,24 +26,17 @@ Options:
 """
 
 import docopt  #proste menu i pobieranie argumentow z powloki
-import argparse
-import time
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto import Random
 from Crypto.Signature import PKCS1_v1_5
-import binascii
-import base64
+
 
 #generowanie kluczy
 def generate_keys(bytesNumber=4096):
     randomGenerator = Random.new().read
     key = RSA.generate(bytesNumber, randomGenerator)
     return (key, key.exportKey('PEM'), key.publickey().exportKey('PEM')) #zwracamy dwa klucze w formacie pem
-
-
-def encrypt(pubkey, plain_text):
-    pass
 
   
 def generate_signature(key, data, sig_f):
