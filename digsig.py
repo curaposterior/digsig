@@ -92,4 +92,3 @@ if __name__ == '__main__':
         
     elif args["check"]:
         verify_signature(args["<keyfilename>"], args["<filename>"], args["<sig_file>"])
-        pass
