@@ -88,8 +88,8 @@ if __name__ == '__main__':
             print(f.read().split("\n\n")[0].strip())
 
     elif args["sign"]:
-        generate_signature(args["<filename>"], args["<keyfilename>"], args["<sig_file>"])
-
+        generate_signature(args["<keyfilename>"], args["<filename>"], args["<sig_file>"])
+        
     elif args["check"]:
         verify_signature(args["<keyfilename>"], args["<filename>"], args["<sig_file>"])
         pass
